@@ -4,9 +4,10 @@
   "description": "cloning youtube with vanilla and node.js",
   "main": "index.js",
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --ignore 'scss' ",
+    "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore '.scss' --ignore 'static' ",
     "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
-    "build:assets": "WEBPACK_ENV=production webpack"
+    "build:assets": "WEBPACK_ENV=production webpack",
+    "tunnel": "ngrok http 4000"
   },
   "author": "ryun",
   "license": "ISC",
